@@ -19,6 +19,7 @@ const ctgrRoutes = require('./routes/dashboard/category.routes');
 const itemRoutes = require('./routes/dashboard/item.routes');
 const userRoutes = require('./routes/auth/users');
 const dashuserRoutes = require('./routes/dashboard/user.routes');
+const orderRoutes = require('./routes/dashboard/order.routes');
 const mpesaRoutes = require('./routes/mpesa/mpesa');
 // const passport = require('passport');
 
@@ -47,6 +48,7 @@ app.use('/api', ctgrRoutes);
 app.use('/api', itemRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api', dashuserRoutes);
+app.use('/api', orderRoutes);
 app.use('/api/mpesa', mpesaRoutes);
 
 // LISTENING PORT
