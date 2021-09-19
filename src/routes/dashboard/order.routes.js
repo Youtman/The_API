@@ -7,11 +7,11 @@ const router = express.Router();
 router.get('/orders', orderController.findAll);
 // Create a new order
 router.post('/orders', orderController.create);
-// Retrieve a single order with id
+// Retrieve a single order by id
 router.get('/order/:id', orderController.findOne);
-// Update a order with id
+// Update an order by id
 router.put('/order/:id', orderController.update);
-// Delete a order with id
+// Delete an order by id
 router.delete('/order/:id', orderController.delete);
 
 module.exports = router;
