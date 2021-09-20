@@ -5,24 +5,24 @@ const dashuserSchema = new Schema(
   {
     fullname: {
       type: String,
-      required: true,
-      unique: true,
+      // required: true,
+      // unique: true,
     },
     email: {
       type: String,
-      required: true,
-      unique: true,
+      // required: true,
+      // unique: true,
       min: 8,
       max: 255,
     },
     role: {
       type: String,
-      enum: ['admin', 'member'],
-      required: true,
+      // enum: ['admin', 'member'],
+      // required: true,
     },
     password: {
       type: String,
-      required: true,
+      // required: true,
       min: 8,
       max: 1024,
     },
