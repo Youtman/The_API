@@ -19,7 +19,7 @@ router.post('/login', async (req, res) => {
     // The email and password are correct!
 
     const token = jwt.sign({ id: user._id, email: user.email }, secret);
-    return res.json({ status: 'ok', data: token });
+    return res.json({ status: "ok", data: token, email: user.email });
   }
   // res.json({ status: 'ok', data: token });
   res.send('Ola! We deyah..');

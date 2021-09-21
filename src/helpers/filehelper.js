@@ -1,24 +1,24 @@
-'use strict';
-const multer = require('multer');
-const path = require('path');
+"use strict";
+const multer = require("multer");
+const path = require("path");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, 'uploads');
+    cb(null, "src/uploads");
   },
   filename: (req, file, cb) => {
     cb(
       null,
-      new Date().toISOString().replace(/:/g, '-') + ' ' + file.originalname
+      new Date().toISOString().replace(/:/g, "-") + " " + file.originalname
     );
   },
 });
 
 const fileFilter = (req, file, cb) => {
   if (
-    file.mimetype === 'image/png' ||
-    file.mimetype === 'image/jpg' ||
-    file.mimetype === 'image/jpeg'
+    file.mimetype === "image/png" ||
+    file.mimetype === "image/jpg" ||
+    file.mimetype === "image/jpeg"
   ) {
     cb(null, true);
   } else {
